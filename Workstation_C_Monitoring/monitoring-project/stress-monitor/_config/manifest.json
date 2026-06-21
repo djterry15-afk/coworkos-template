@@ -1,0 +1,73 @@
+{
+  "_comment": "THE STANDING MANIFEST — authoritative machine-readable config read by the stage scripts. 'series' = what to fetch from FRED; 'composite_anchor' + 'components' = what to display. 'description' = the plain-language 'what it is' line shown on the dashboard; 'group' buckets components in the explanation section. Directions: 'higher = more stress' or 'context'.",
+  "history_start": "2007-01-01",
+  "series": [
+    {"id": "NFCI", "label": "Chicago Fed National Financial Conditions Index"},
+    {"id": "THREEFYTP10", "label": "10Y term premium (Kim-Wright model, Fed Board)"},
+    {"id": "SOFR", "label": "Secured Overnight Financing Rate"},
+    {"id": "EFFR", "label": "Effective Federal Funds Rate"},
+    {"id": "BAMLH0A0HYM2", "label": "ICE BofA US High Yield OAS"},
+    {"id": "BAMLC0A0CM", "label": "ICE BofA US Corporate (IG) OAS"}
+  ],
+  "composite_anchor": {
+    "key": "nfci",
+    "label": "Chicago Fed NFCI (overall financial conditions)",
+    "type": "series",
+    "id": "NFCI",
+    "units": "index",
+    "direction": "higher = more stress",
+    "description": "Composite of ~105 indicators of US financial conditions. 0 = average; positive = tighter (more stress) than average, negative = looser.",
+    "stress_windows": ["GFC", "COVID"]
+  },
+  "components": [
+    {
+      "key": "term_premium",
+      "label": "10Y Term Premium",
+      "type": "series",
+      "id": "THREEFYTP10",
+      "units": "%",
+      "direction": "context",
+      "group": "Funding plumbing (these move first)",
+      "description": "Extra yield investors demand to hold a 10-year bond rather than roll short-term debt — compensation for duration/rate risk.",
+      "stress_windows": ["GFC", "COVID"]
+    },
+    {
+      "key": "sofr_effr",
+      "label": "SOFR - EFFR (funding spread)",
+      "type": "spread",
+      "minuend": "SOFR",
+      "subtrahend": "EFFR",
+      "units": "pp",
+      "direction": "higher = more stress",
+      "group": "Funding plumbing (these move first)",
+      "description": "Gap between secured (repo, SOFR) and unsecured (fed funds, EFFR) overnight borrowing. Spikes signal funding/plumbing stress.",
+      "stress_windows": ["COVID"]
+    },
+    {
+      "key": "hy_oas",
+      "label": "HY credit OAS",
+      "type": "series",
+      "id": "BAMLH0A0HYM2",
+      "units": "pp",
+      "direction": "higher = more stress",
+      "group": "Credit spreads (these confirm, and lag)",
+      "description": "Extra yield on US high-yield (junk) bonds over Treasuries. Widens when risk appetite drops.",
+      "stress_windows": ["GFC", "COVID"]
+    },
+    {
+      "key": "ig_oas",
+      "label": "IG credit OAS",
+      "type": "series",
+      "id": "BAMLC0A0CM",
+      "units": "pp",
+      "direction": "higher = more stress",
+      "group": "Credit spreads (these confirm, and lag)",
+      "description": "Extra yield on US investment-grade corporate bonds over Treasuries.",
+      "stress_windows": ["GFC", "COVID"]
+    }
+  ],
+  "stress_windows": {
+    "GFC": ["2008-09-01", "2009-06-30"],
+    "COVID": ["2020-02-15", "2020-05-31"]
+  }
+}

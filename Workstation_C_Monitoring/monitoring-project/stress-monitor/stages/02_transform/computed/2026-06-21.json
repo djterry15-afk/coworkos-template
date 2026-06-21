@@ -1,0 +1,115 @@
+{
+  "run_date": "2026-06-21",
+  "snapshot": "stages/01_fetch/snapshots/2026-06-21",
+  "anchor": {
+    "key": "nfci",
+    "label": "Chicago Fed NFCI (overall financial conditions)",
+    "available": true,
+    "units": "index (0 = average; + = tighter than average)",
+    "direction": "higher = more stress",
+    "latest": {
+      "date": "2026-06-12",
+      "value": -0.505
+    },
+    "change_1w": 0.0,
+    "change_1m": -0.005,
+    "percentile": 43.4,
+    "history_start": "2007-01-05",
+    "window_peaks": {
+      "GFC": {
+        "date": "2008-11-28",
+        "value": 3.066
+      },
+      "COVID": {
+        "date": "2020-04-03",
+        "value": 0.306
+      }
+    }
+  },
+  "components": [
+    {
+      "key": "term_premium",
+      "label": "10Y Term Premium",
+      "available": true,
+      "units": "%",
+      "direction": "context",
+      "latest": {
+        "date": "2026-06-12",
+        "value": 0.7671
+      },
+      "change_1w": -0.0348,
+      "change_1m": 0.0183,
+      "percentile": 88.0,
+      "history_start": "2007-01-02",
+      "window_peaks": {
+        "GFC": {
+          "date": "2009-06-10",
+          "value": 1.2529
+        },
+        "COVID": {
+          "date": "2020-03-19",
+          "value": -0.291
+        }
+      }
+    },
+    {
+      "key": "sofr_effr",
+      "label": "SOFR \u2212 EFFR (secured vs unsecured funding)",
+      "available": true,
+      "units": "pp",
+      "direction": "higher = more stress",
+      "latest": {
+        "date": "2026-06-17",
+        "value": 0.0
+      },
+      "change_1w": 0.03,
+      "change_1m": 0.1,
+      "percentile": 69.0,
+      "history_start": "2018-04-03",
+      "window_peaks": {
+        "COVID": {
+          "date": "2020-03-17",
+          "value": 0.29
+        }
+      }
+    },
+    {
+      "key": "hy_oas",
+      "label": "HY credit OAS",
+      "available": true,
+      "units": "pp",
+      "direction": "higher = more stress",
+      "latest": {
+        "date": "2026-06-17",
+        "value": 2.63
+      },
+      "change_1w": -0.17,
+      "change_1m": -0.2,
+      "percentile": 1.8,
+      "history_start": "2023-06-19",
+      "window_peaks": {
+        "GFC": null,
+        "COVID": null
+      }
+    },
+    {
+      "key": "ig_oas",
+      "label": "IG credit OAS",
+      "available": true,
+      "units": "pp",
+      "direction": "higher = more stress",
+      "latest": {
+        "date": "2026-06-17",
+        "value": 0.74
+      },
+      "change_1w": -0.01,
+      "change_1m": -0.01,
+      "percentile": 3.6,
+      "history_start": "2023-06-19",
+      "window_peaks": {
+        "GFC": null,
+        "COVID": null
+      }
+    }
+  ]
+}
