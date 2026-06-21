@@ -5,7 +5,7 @@
     "key": "nfci",
     "label": "Chicago Fed NFCI (overall financial conditions)",
     "available": true,
-    "units": "index (0 = average; + = tighter than average)",
+    "units": "index",
     "direction": "higher = more stress",
     "latest": {
       "date": "2026-06-12",
@@ -54,7 +54,7 @@
     },
     {
       "key": "sofr_effr",
-      "label": "SOFR \u2212 EFFR (secured vs unsecured funding)",
+      "label": "SOFR - EFFR (funding spread)",
       "available": true,
       "units": "pp",
       "direction": "higher = more stress",
