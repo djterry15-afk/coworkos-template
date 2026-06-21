@@ -25,15 +25,29 @@ makes. Climbing the tier tree (ROOT → workstation → project → workflow) do
 tier re-instantiates the same small set of layer-jobs, scoped down. See
 `tier-1-2-root-workstation-model.md`.
 
-**Two taxonomies, demonstrated deliberately.** The template shows both:
+**Two taxonomies, demonstrated through composition.** The template shows both — arranged the way the system
+is really used (composed), not as a flat one-per-slot catalog:
 - **Project *kinds* (tier-3):** Reasoning Workspace · Reference Repo · Build/Workflow — *what a project is*.
 - **Workflow *shapes* (tier-4):** staged-pipeline+hub · exploratory fan-in · deterministic monitor — *how a
   production pipeline is wired*.
 
-Workstations A/B/C are Reasoning Workspaces, one workflow shape each. Workstation D is a single domain
-holding two projects of the **other** two kinds (Reference Repo + Build/Workflow) — which also demonstrates
-the truth that a workstation contains mixed-kind projects (a kind is a project-level property, not a
-domain-level one). Together: all three kinds × all three shapes.
+- **Writing** — the simple case: one Reasoning Workspace, one shape (a content factory).
+- **Markets** — the composed case: a single `market-thesis` project runs the full acquire → organize →
+  monitor → conclude loop — *two* tier-4 shapes (exploratory fan-in research + deterministic monitor) plus an
+  organizing wiki, all under one project. A domain/project composes multiple shapes; **a shape is a property
+  of a workflow, not of a domain.**
+- **Workbench** — the mixed-kind case: one domain holding two projects of different kinds (Reference Repo +
+  Build/Workflow); **a kind is a property of a project, not of a domain.**
+
+Together: all three kinds and all three shapes, shown in composition.
+
+**Why composition over a flat catalog (2026-06-21 restructure).** An earlier published draft used a
+one-workstation-per-shape catalog (separate Content / Research / Monitoring domains + a Library domain for
+the two leftover kinds). It was tidy but misrepresented the system: it named domains after *work-types* (a
+"Monitoring" domain is a shape wearing a domain's clothes), hid the acquire → organize → monitor → conclude
+seams the doctrine itself describes, and implied one-shape-per-domain. The restructure co-locates the
+research factory + monitor + wiki under one market thesis (their real relationship), names domains as
+subject-areas, and keeps the mixed-kind Workbench.
 
 **Why three workflow shapes, validated before inclusion.** The three shapes span the space of how a tier-4
 pipeline can be wired — produce-and-fan-out, acquire-by-discovery, and run-determinism-on-a-schedule. Each
@@ -65,3 +79,11 @@ ceremonial scaffolding. A Forming or Dormant project gets only `CLAUDE.md` + `CO
 - **Initial release.** ROOT + operator-contract template; the tier-1-2 / tier-3 / tier-4 doctrine; three
   Reasoning-Workspace workstations (one workflow shape each, with an illustrative sample run); a
   library/tooling workstation demonstrating the Reference Repo and Build/Workflow kinds.
+- **2026-06-21 — restructured to composition.** Replaced the one-workstation-per-shape catalog with a
+  composed layout: **Writing** (one project, one shape), **Markets** (`market-thesis` running fan-in research
+  + a deterministic monitor + a wiki — the acquire → organize → monitor → conclude loop), **Workbench**
+  (mixed-kind Reference Repo + Build/Workflow). Domains renamed as subject-areas; the research sample
+  re-themed to a markets question ("which stress metrics lead vs. lag?") so it coheres with the monitor it
+  feeds. All three kinds and three shapes retained.
+- **2026-06-21 — monitor key-loading fix.** Added `python-dotenv` to the monitor's `requirements.txt` so the
+  documented `.env` flow works out of the box (the `load_dotenv` import was optional and silently no-opped).

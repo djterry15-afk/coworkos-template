@@ -61,9 +61,9 @@ Three shapes span the space (this template demonstrates one of each):
 
 | Shape | Motion | Example in this template |
 |---|---|---|
-| **Staged pipeline + hub** (content-production) | seed → collect → draft platform-neutral core → render to N sinks | `Workstation_A_Content/.../content-factory` |
-| **Exploratory fan-in** (research-acquisition) | seed → discover + grade external sources → snapshot → brief | `Workstation_B_Research/.../research-factory` |
-| **Deterministic monitor** | standing manifest → fetch data → transform (pure) → render report | `Workstation_C_Monitoring/.../stress-monitor` |
+| **Staged pipeline + hub** (content-production) | seed → collect → draft platform-neutral core → render to N sinks | `Workstation_A_Writing/.../content-factory` |
+| **Exploratory fan-in** (research-acquisition) | seed → discover + grade external sources → snapshot → brief | `Workstation_B_Markets/.../research-factory` |
+| **Deterministic monitor** | standing manifest → fetch data → transform (pure) → render report | `Workstation_B_Markets/.../stress-monitor` |
 
 **The discriminating test for the deterministic shape:** its value must live in the **determinism** (the
 repetition a script runs forever) **and** its input must be **data, not reasoning-output** (so the

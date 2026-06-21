@@ -25,21 +25,30 @@ write-up in [`00_Resources/references/tier-1-2-root-workstation-model.md`](00_Re
 ```
 CLAUDE.md / CONTEXT.md          ROOT — map + operator contract (auto-loaded every session)
 00_Resources/references/        the doctrine: tier-1-2, tier-3, tier-4 models + design rationale
-Workstation_A_Content/          example domain → content-project → content-factory (tier-4)
-Workstation_B_Research/         example domain → research-project → research-factory (tier-4)
-Workstation_C_Monitoring/       example domain → monitoring-project → stress-monitor (tier-4)
-Workstation_D_Library/          example domain holding two MIXED-KIND projects:
+Workstation_A_Writing/          example domain → content-project → content-factory (one shape)
+Workstation_B_Markets/          example domain → market-thesis, one COMPOSED project:
+                                  llm-wiki (organizes) + research-factory (fan-in) + stress-monitor (monitor)
+Workstation_C_Workbench/        example domain holding two MIXED-KIND projects:
                                   reference-library (Reference Repo) + build-tool (Build/Workflow)
 ```
 
-The template demonstrates **two orthogonal taxonomies**:
+The template demonstrates **two orthogonal taxonomies**, arranged to show how the system really composes:
 
-- **Project kinds** (*what a project is*, tier-3): **Reasoning Workspace** (A/B/C) · **Reference Repo** ·
-  **Build/Workflow** (the last two live in workstation D).
+- **Project kinds** (*what a project is*, tier-3): **Reasoning Workspace** (Writing, Markets) · **Reference
+  Repo** · **Build/Workflow** (the last two live side by side in Workbench).
 - **Workflow shapes** (*how a tier-4 pipeline is wired*, tier-4): the three below.
 
-A *kind* is a property of a project, not a domain — which is why workstation D holds two kinds side by side.
-The skeleton (the tier wiring + conventions) is the canon; the examples are fillings that show the range.
+The three example domains show **composition**, not a flat catalog:
+
+- **Writing** — the simple case: one project, one shape.
+- **Markets** — the composed case: one `market-thesis` project runs the whole **acquire → organize → monitor
+  → conclude** loop (a fan-in research factory + a deterministic monitor + a wiki, all under one project).
+  *A shape is a property of a workflow, not a domain.*
+- **Workbench** — the mixed-kind case: one domain, two projects of different kinds. *A kind is a property of
+  a project, not a domain.*
+
+The skeleton (the tier wiring + conventions) is the canon; the examples are fillings. Replace them with your
+own domains.
 
 ## The three tier-4 (WORKFLOW) shapes
 
@@ -77,7 +86,7 @@ see the shape end-to-end.
 4. To see a tier-4 run live, try the deterministic monitor — it works out of the box:
 
 ```bash
-cd Workstation_C_Monitoring/monitoring-project/stress-monitor
+cd Workstation_B_Markets/market-thesis/stress-monitor
 cp .env.example .env          # then put your free FRED API key in .env
 pip install -r requirements.txt
 python stages/01_fetch/fetch.py

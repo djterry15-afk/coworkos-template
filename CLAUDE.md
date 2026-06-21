@@ -32,25 +32,31 @@ coworkos-template/
 │       ├── tier-3-project-model.md   ← how to organize files within a project (the project KINDS)
 │       ├── tier-4-workflow-model.md  ← the WORKFLOW (pipeline-ICM) tier model + the three SHAPES
 │       └── decisions-log.md          ← the design rationale (the "why" behind the template's shape)
-├── Workstation_A_Content/            ← EXAMPLE — content domain (Reasoning Workspace)
-│   └── content-project/
+├── Workstation_A_Writing/            ← EXAMPLE domain (subject-area) — the simple case: one project, one shape
+│   └── content-project/              ← Reasoning Workspace
 │       └── content-factory/          ← tier-4 shape: content-production (staged-pipeline + hub)
-├── Workstation_B_Research/           ← EXAMPLE — research domain (Reasoning Workspace)
-│   └── research-project/
-│       └── research-factory/         ← tier-4 shape: research-acquisition (exploratory fan-in)
-├── Workstation_C_Monitoring/         ← EXAMPLE — monitoring domain (Reasoning Workspace)
-│   └── monitoring-project/
+├── Workstation_B_Markets/            ← EXAMPLE domain — the COMPOSED case: one project runs the whole loop
+│   └── market-thesis/                ← Reasoning Workspace — acquire → organize → monitor → conclude
+│       ├── llm-wiki/                 ← organizes sourced knowledge (Layer-3 store)
+│       ├── research-factory/         ← tier-4 shape: research-acquisition (exploratory fan-in) — acquires
 │       └── stress-monitor/           ← tier-4 shape: deterministic monitor (data → transform → report)
-└── Workstation_D_Library/            ← EXAMPLE — a domain holding two MIXED-KIND projects
+└── Workstation_C_Workbench/          ← EXAMPLE domain — the MIXED-KIND case: two projects, two kinds
     ├── reference-library/            ← project kind: Reference Repo (consult / retrieve from)
     └── build-tool/                   ← project kind: Build / Workflow (reasoning shell over a code body)
 ```
 
-The template demonstrates **two orthogonal taxonomies**: the three project **kinds** (Reasoning Workspace ·
+The template demonstrates **two orthogonal taxonomies** — the three project **kinds** (Reasoning Workspace ·
 Reference Repo · Build/Workflow — *what a project is*, tier-3) and the three workflow **shapes**
-(staged-pipeline+hub · exploratory fan-in · deterministic monitor — *how a tier-4 pipeline is wired*).
-Workstations A/B/C are Reasoning Workspaces, one shape each; workstation D holds the other two kinds (and
-shows that a domain contains mixed-kind projects). The skeleton — the tier wiring + conventions — is the
+(staged-pipeline+hub · exploratory fan-in · deterministic monitor — *how a tier-4 pipeline is wired*) — and
+arranges them to show **composition**, the way the system is really used:
+- **Writing** is the simple case: one project, one shape (a content factory).
+- **Markets** is the composed case: a single `market-thesis` project runs the full **acquire → organize →
+  monitor → conclude** loop — two different tier-4 shapes (fan-in research + deterministic monitor) plus a
+  wiki, under one project. *A shape is a property of a workflow, not of a domain.*
+- **Workbench** is the mixed-kind case: one domain holding two projects of different kinds (Reference Repo +
+  Build/Workflow). *A kind is a property of a project, not of a domain.*
+
+All three kinds and all three shapes are present. The skeleton — the tier wiring + conventions — is the
 canon; these examples are fillings. Replace them with your real domains.
 
 ---
@@ -59,10 +65,9 @@ canon; these examples are fillings. Replace them with your real domains.
 
 | Task | Navigate to | Load | Skip |
 |------|-------------|------|------|
-| Content / writing work | Workstation_A_Content/ | Workstation CLAUDE.md + CONTEXT.md → project files | B, C, D |
-| Research / analysis | Workstation_B_Research/ | Workstation CLAUDE.md + CONTEXT.md → project files | A, C, D |
-| Monitoring / recurring data | Workstation_C_Monitoring/ | Workstation CLAUDE.md + CONTEXT.md → project files | A, B, D |
-| Reference lookup / building a tool | Workstation_D_Library/ | Workstation CLAUDE.md + CONTEXT.md → the relevant project | A, B, C |
+| Content / writing work | Workstation_A_Writing/ | Workstation CLAUDE.md + CONTEXT.md → project files | B, C |
+| Research, analysis, or monitoring a thesis | Workstation_B_Markets/ | Workstation CLAUDE.md + CONTEXT.md → market-thesis files | A, C |
+| Reference lookup / building a tool | Workstation_C_Workbench/ | Workstation CLAUDE.md + CONTEXT.md → the relevant project | A, B |
 | Cross-workstation prioritization | ROOT only | CLAUDE.md + CONTEXT.md | All workstation files |
 | Architecture / ICM decisions | 00_Resources/references/ | tier-1-2-root-workstation-model.md (+ decisions-log.md for the "why") | All workstation files |
 | Setting up / reorganizing a project | 00_Resources/references/ | tier-3-project-model.md | All workstation files |
