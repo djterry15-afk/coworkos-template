@@ -24,14 +24,22 @@ write-up in [`00_Resources/references/tier-1-2-root-workstation-model.md`](00_Re
 
 ```
 CLAUDE.md / CONTEXT.md          ROOT — map + operator contract (auto-loaded every session)
-00_Resources/references/        the doctrine: tier-1-2, tier-3, tier-4 models
+00_Resources/references/        the doctrine: tier-1-2, tier-3, tier-4 models + design rationale
 Workstation_A_Content/          example domain → content-project → content-factory (tier-4)
 Workstation_B_Research/         example domain → research-project → research-factory (tier-4)
 Workstation_C_Monitoring/       example domain → monitoring-project → stress-monitor (tier-4)
+Workstation_D_Library/          example domain holding two MIXED-KIND projects:
+                                  reference-library (Reference Repo) + build-tool (Build/Workflow)
 ```
 
-The three workstations each demonstrate **one tier-4 workflow shape**. The skeleton (the tier wiring +
-conventions) is the canon; the pipelines are fillings that show the range.
+The template demonstrates **two orthogonal taxonomies**:
+
+- **Project kinds** (*what a project is*, tier-3): **Reasoning Workspace** (A/B/C) · **Reference Repo** ·
+  **Build/Workflow** (the last two live in workstation D).
+- **Workflow shapes** (*how a tier-4 pipeline is wired*, tier-4): the three below.
+
+A *kind* is a property of a project, not a domain — which is why workstation D holds two kinds side by side.
+The skeleton (the tier wiring + conventions) is the canon; the examples are fillings that show the range.
 
 ## The three tier-4 (WORKFLOW) shapes
 
