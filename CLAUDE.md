@@ -6,7 +6,7 @@
 
 ## What This Is
 
-A tiered, file-based **Intelligent Context Management (ICM)** workspace for cross-domain reasoning
+A tiered, file-based workspace applying the **Interpretable Context Methodology (ICM)** for cross-domain reasoning
 and artifact production with an AI agent. The structure *is* the system: routing tables decide what
 to load, plain-text files are the memory, and human gates govern anything that writes durable state.
 

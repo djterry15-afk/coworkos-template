@@ -11,7 +11,7 @@ This workspace combines two systems that were never designed together:
 
 - **The tier tree** — a simple folder/routing template: `ROOT → WORKSTATION → PROJECT`, with a *map* and
   a *router* at each node. A **navigation** system that separates context by scope.
-- **The five layers — from ICM** (Intelligent / Interpretable Context Management): a 0–4 context-role
+- **The five layers — from ICM** (Interpretable Context Methodology): a 0–4 context-role
   model for a **single sequential pipeline** — numbered stages, human review gates, produces artifacts. A
   **context-engineering** system concerned with *what job each file does* and *how little to load at once*.
 

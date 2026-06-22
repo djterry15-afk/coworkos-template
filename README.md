@@ -7,15 +7,14 @@ the memory, and human gates govern anything that writes durable state.
 
 It is a denatured skeleton — replace the example workstations with your own domains.
 
-## The idea: ICM (Intelligent Context Management)
+## The architecture: CoworkOS + ICM
 
 Instead of one giant context window (or RAG at query time), context is organized into a tree of small,
 purpose-scoped files. Each node has a **map** (`CLAUDE.md`) and a **router/synthesis** (`CONTEXT.md`); the
 agent navigates the tree and loads only what the current task needs. Two ideas are welded together:
 
-- a **tier tree** that separates context by scope — `ROOT → WORKSTATION → PROJECT → WORKFLOW`;
-- the **ICM five-layer model** (L0 map · L1 route/synthesis · L2 stage contract · L3 reference · L4
-  artifacts) that says *what job each file does* and *how little to load at once*.
+- **CoworkOS**: a four-level **tier tree** that separates context by scope — `ROOT → WORKSTATION → PROJECT → WORKFLOW` (with domain workstations and project kind/state rules).
+- **ICM (Interpretable Context Methodology)**: applied at Tier 4 (Workflow), a **five-layer model** (L0 map · L1 route/synthesis · L2 stage contract · L3 reference · L4 artifacts) that says *what job each file does* and *how little to load at once*.
 
 The key correction the model makes: **a tier is a place, a layer is a job — they are orthogonal.** Full
 write-up in [`00_Resources/references/tier-1-2-root-workstation-model.md`](00_Resources/references/tier-1-2-root-workstation-model.md).
