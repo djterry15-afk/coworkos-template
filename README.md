@@ -23,28 +23,37 @@ write-up in [`00_Resources/references/tier-1-2-root-workstation-model.md`](00_Re
 
 ```
 CLAUDE.md / CONTEXT.md          ROOT — map + operator contract (auto-loaded every session)
-00_Resources/references/        the doctrine: tier-1-2, tier-3, tier-4 models + design rationale
+00_Resources/                   cross-domain-map (L1 orient) + references/ — the doctrine
+                                  (tier-1-2/3/4 models, design rationale, source distillations, skills)
 Workstation_A_Writing/          example domain → content-project → content-factory (one shape)
+                                  + forming-idea (a Forming stub — STATE example)
 Workstation_B_Markets/          example domain → market-thesis, one COMPOSED project:
                                   llm-wiki (organizes) + research-factory (fan-in) + stress-monitor (monitor)
-Workstation_C_Workbench/        example domain holding two MIXED-KIND projects:
-                                  reference-library (Reference Repo) + build-tool (Build/Workflow)
+Workstation_C_Workbench/        example domain holding contrasting KINDS and STATES:
+                                  reference-library (Reference Repo · consult) + reference-study (Reasoning ·
+                                  synthesize-across) + build-tool (Build/Workflow) + retired-tool (Dead)
 ```
 
-The template demonstrates **two orthogonal taxonomies**, arranged to show how the system really composes:
+The template demonstrates **three orthogonal axes**, arranged to show how the system really composes:
 
-- **Project kinds** (*what a project is*, tier-3): **Reasoning Workspace** (Writing, Markets) · **Reference
-  Repo** · **Build/Workflow** (the last two live side by side in Workbench).
-- **Workflow shapes** (*how a tier-4 pipeline is wired*, tier-4): the three below.
+- **Project kinds** (*what a project is*, tier-3): **Reasoning Workspace** · **Reference Repo** ·
+  **Build/Workflow**. The sharpest lesson is in Workbench, where a **flat Reference Repo** (`reference-library`
+  — consult one entry at a time) sits beside a **Reasoning Workspace** (`reference-study` — synthesize *across*
+  reference sub-projects): *same kind of material, opposite relationship, opposite kind — classify on the
+  relationship, not the appearance.*
+- **Project states** (*whether a project is alive*, tier-3): most examples are `Active`; two exist to teach
+  the axis — `forming-idea` (Forming/stub) and `retired-tool` (Dead) — showing that **state gates structure**
+  (a stub hasn't earned its structure yet; a Dead project has shed it).
+- **Workflow shapes** (*how a tier-4 pipeline is wired*, tier-4): the three in the table below.
 
 The three example domains show **composition**, not a flat catalog:
 
-- **Writing** — the simple case: one project, one shape.
+- **Writing** — the simple case: one project, one shape (plus a Forming stub as a state example).
 - **Markets** — the composed case: one `market-thesis` project runs the whole **acquire → organize → monitor
   → conclude** loop (a fan-in research factory + a deterministic monitor + a wiki, all under one project).
   *A shape is a property of a workflow, not a domain.*
-- **Workbench** — the mixed-kind case: one domain, two projects of different kinds. *A kind is a property of
-  a project, not a domain.*
+- **Workbench** — the mixed case: one domain holding contrasting **kinds** (Reference Repo · Reasoning ·
+  Build/Workflow) and **states** (Active · Dead). *A kind is a property of a project, not a domain.*
 
 The skeleton (the tier wiring + conventions) is the canon; the examples are fillings. Replace them with your
 own domains.

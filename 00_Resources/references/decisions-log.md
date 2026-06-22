@@ -25,21 +25,25 @@ makes. Climbing the tier tree (ROOT → workstation → project → workflow) do
 tier re-instantiates the same small set of layer-jobs, scoped down. See
 `tier-1-2-root-workstation-model.md`.
 
-**Two taxonomies, demonstrated through composition.** The template shows both — arranged the way the system
+**Three axes, demonstrated through composition.** The template shows all three — arranged the way the system
 is really used (composed), not as a flat one-per-slot catalog:
-- **Project *kinds* (tier-3):** Reasoning Workspace · Reference Repo · Build/Workflow — *what a project is*.
-- **Workflow *shapes* (tier-4):** staged-pipeline+hub · exploratory fan-in · deterministic monitor — *how a
+- **Project *kind* (tier-3):** Reasoning Workspace · Reference Repo · Build/Workflow — *what a project is*.
+- **Project *state* (tier-3):** Active · Forming · Dead — *whether it's alive; state gates structure*.
+- **Workflow *shape* (tier-4):** staged-pipeline+hub · exploratory fan-in · deterministic monitor — *how a
   production pipeline is wired*.
 
-- **Writing** — the simple case: one Reasoning Workspace, one shape (a content factory).
+- **Writing** — the simple case: one Reasoning Workspace, one shape (a content factory), plus a Forming stub
+  (`forming-idea`) as a state example.
 - **Markets** — the composed case: a single `market-thesis` project runs the full acquire → organize →
   monitor → conclude loop — *two* tier-4 shapes (exploratory fan-in research + deterministic monitor) plus an
   organizing wiki, all under one project. A domain/project composes multiple shapes; **a shape is a property
   of a workflow, not of a domain.**
-- **Workbench** — the mixed-kind case: one domain holding two projects of different kinds (Reference Repo +
-  Build/Workflow); **a kind is a property of a project, not of a domain.**
+- **Workbench** — the mixed case: one domain holding contrasting kinds — a flat Reference Repo
+  (`reference-library`, consult) beside a Reasoning Workspace that synthesizes *across* reference material
+  (`reference-study`), plus a Build/Workflow (`build-tool`) — and contrasting states (a Dead `retired-tool`);
+  **a kind is a property of a project, not of a domain.**
 
-Together: all three kinds and all three shapes, shown in composition.
+Together: all three kinds and all three shapes, plus the state axis (Active/Forming/Dead), shown in composition.
 
 **Why composition over a flat catalog (2026-06-21 restructure).** An earlier published draft used a
 one-workstation-per-shape catalog (separate Content / Research / Monitoring domains + a Library domain for
@@ -87,3 +91,10 @@ ceremonial scaffolding. A Forming or Dormant project gets only `CLAUDE.md` + `CO
   feeds. All three kinds and three shapes retained.
 - **2026-06-21 — monitor key-loading fix.** Added `python-dotenv` to the monitor's `requirements.txt` so the
   documented `.env` flow works out of the box (the `load_dotenv` import was optional and silently no-opped).
+- **2026-06-22 — ship audit pass.** Full cold-read audit before publishing. Added the **web-capture** skill
+  (denatured) and wired it into ROOT routing + the Skills table — closing a dangling reference from the
+  research factory's `01_source` stage (the only real operational break the audit found). Cleaned denature
+  leftovers (a stale workstation name in the content project's load order; "the operator" capitalization and
+  two gendered pronouns in the research factory). Recorded that a project may nest **more than one** tier-4
+  workflow (tier-3 model — skeleton + prose, with `market-thesis` as the example), and pointed the
+  `market-thesis` synthesis placeholder at `reference-study` as the worked example of a filled synthesis.

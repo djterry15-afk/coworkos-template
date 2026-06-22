@@ -28,8 +28,8 @@ the brief faithfully represent the evidence, and stop short of a verdict?*
 
 ## GATE → done
 
-the operator confirms: the brief represents the graded evidence · contradictions aren't smoothed over ·
-it stops short of a verdict. **On accept:** the operator reasons it into the parent market-thesis project `CONTEXT.md` (his
+The operator confirms: the brief represents the graded evidence · contradictions aren't smoothed over ·
+it stops short of a verdict. **On accept:** the operator reasons it into the parent market-thesis project `CONTEXT.md` (your
 call) · sources optionally handed to the wiki · working files archived → `_archive/<slug>/`.
 
 ---

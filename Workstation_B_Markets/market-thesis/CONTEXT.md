@@ -11,6 +11,10 @@
 open forks, and the current verdict (dated, additive). Probabilities/weighting are the human's call and land
 here, never in the pipeline.
 
+*This file is left as a placeholder because real thesis content can't be denatured. For a **worked example
+of a filled project synthesis** — the router→synthesis→router "bulge" the doctrine describes — see
+`../../Workstation_C_Workbench/reference-study/CONTEXT.md`.*
+
 ## THE WORKFLOWS BENEATH THIS PROJECT
 
 Three helpers, one per role — this is the composed loop the template demonstrates:

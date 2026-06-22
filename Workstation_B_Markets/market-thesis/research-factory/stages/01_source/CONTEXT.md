@@ -31,7 +31,7 @@ candidate ledger (pre-gate) → human approves → commit full snapshots of appr
 5. **Surface the angle** the evidence points to — a *candidate for the operator*, not a decision.
 
 ## GATE (U-curve peak — mid-stage)
-the operator approves, in order: **(a)** the candidate **source set** — right sources, nothing missing, scope
+The operator approves, in order: **(a)** the candidate **source set** — right sources, nothing missing, scope
 honoured; **(b)** the **grades** + authorship; **(c)** the candidate **angle**. **Disclose any narrowing
 you did.** Weak / AI-authored sources demoted here.
 

@@ -86,6 +86,9 @@ assumed state · you leave with more confidence in the direction than you starte
 *(Adapt to your trust level.)* At session close, conclusions flush to the relevant `CONTEXT.md` (the
 truth layer must never lag the session). Write a handoff only when work continues mid-thread; write a
 distillation only when the session produced reasoning a future session would decide *worse* without.
+And when a conclusion in one domain bears on another, add a row to `00_Resources/cross-domain-map.md`
+in the same pass — that link is invisible later if it isn't caught during the single-domain work where
+it surfaces.
 
 ---
 

@@ -21,9 +21,16 @@ are self-contained and do **not** load this project's synthesis at run time.
 - **`CONTEXT.md`** — the live synthesis: the thesis state, what's settled, the open forks, the verdict.
 - **`research-factory/`** — tier-4 (exploratory fan-in). Acquires external evidence into a brief.
 - **`stress-monitor/`** — tier-4 (deterministic monitor). Fetches → transforms → renders a dated report.
-- **`llm-wiki/`** — the organized source store (`index.md` · `log.md` · `pages/`). The factory may *read* it
-  and, downstream, *feed* it; it is never written mid-run.
-- **`references/`** — *reserved* — created only when a settled rule earns separation from state.
+- **`llm-wiki/`** — the organized source store: `CLAUDE.md` (the schema) · `raw/` (immutable sources) ·
+  `wiki/` (`index.md` control point · `log.md` ingest log · topic pages). The factory may *read* it and,
+  downstream, *feed* it; it is never written mid-run.
+- **`references/`** — extracted **settled rules** (Layer 3), loaded by trigger. Holds `verdict-change-rule.md`
+  — the standing rule for how the verdict is allowed to change. A rule lives here only once it has stopped
+  moving; unsettled exploration stays in `CONTEXT.md` (an empty `references/` would be the over-engineering
+  trap).
+- **`_reasoning-log/`** — spent reasoning (session distillations), out of the default load path, read by its
+  `index.md`. The **trace-to-source** layer: each distillation compiles up into `CONTEXT.md` and can be
+  audited back. Most Reasoning Workspaces grow one.
 
 ## LOAD ORDER
 

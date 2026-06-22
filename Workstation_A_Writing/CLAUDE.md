@@ -18,6 +18,13 @@ piece lives in the tier-4 content factory beneath the project.
 tier-4 content factory (staged-pipeline + hub) that turns one idea into one publish-ready piece.
 → Folder: `content-project/`
 
+**forming-idea** — `Forming (stub) · kind undetermined`. A just-started idea kept deliberately minimal (a map
++ a holding `CONTEXT.md`, nothing more) — the **stub** case. Here to show the **STATE** axis at its starting
+point: *state gates structure*, so a stub earns no `references/`, `_reasoning-log/`, wiki, or `stages/` until
+it goes Active and its kind is known. *(The Dead end of the same lifecycle is shown by
+`Workstation_C_Workbench/retired-tool/`.)*
+→ Folder: `forming-idea/`
+
 ---
 
 ## ROUTING TABLE

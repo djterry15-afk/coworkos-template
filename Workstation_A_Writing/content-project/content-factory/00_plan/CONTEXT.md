@@ -4,7 +4,7 @@
 ---
 
 ## WHERE THE SEED COMES FROM
-A **seed** is one post idea — a *topic*, not an angle. It arrives at run start: stated in the entry prompt, picked from a tier-3 idea-backlog (`LinkedIn Content Skeleton.md`, or `content-briefs/` if it exists), or drawn from a (rare) campaign batch. **No campaign or tier-3 plan is required** — the common path is a single idea you want to explore.
+A **seed** is one post idea — a *topic*, not an angle. It arrives at run start: stated in the entry prompt, picked from a tier-3 idea-backlog (if you keep one), or drawn from a (rare) campaign batch. **No campaign or tier-3 plan is required** — the common path is a single idea you want to explore.
 
 ## INPUTS
 - The seed (entry prompt, or a named tier-3 backlog item).

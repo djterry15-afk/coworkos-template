@@ -28,7 +28,7 @@ this is where selection happens, and the fidelity gate checks the pulled items a
 
 ## GATE → 03_synthesize
 
-the operator confirms the extracted evidence **faithfully matches the snapshot** — no drift, no
+The operator confirms the extracted evidence **faithfully matches the snapshot** — no drift, no
 paraphrase passed off as a quote. An item that can't be traced to the snapshot is removed.
 
 ---

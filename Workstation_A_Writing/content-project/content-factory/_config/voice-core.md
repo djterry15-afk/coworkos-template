@@ -11,7 +11,7 @@
 
 ## HARD CONSTRAINTS
 - **Avoid AI-style punctuation** — no excessive em-dashes, no over-formatting.
-- **No AI tells.** Kill engagement-bait closes: "Curious if anyone else…", "Curious to hear…", "What do you think?", "Let me know in the comments." the operator reads these as obvious bot signals. Close on a reflection, or a real question that stands on its own.
+- **No AI tells.** Kill engagement-bait closes: "Curious if anyone else…", "Curious to hear…", "What do you think?", "Let me know in the comments." The operator reads these as obvious bot signals. Close on a reflection, or a real question that stands on its own.
 - Show the thinking, not just the result. Surface a real tension or realization.
 - No hype, no false certainty. The honest version earns the credibility.
 

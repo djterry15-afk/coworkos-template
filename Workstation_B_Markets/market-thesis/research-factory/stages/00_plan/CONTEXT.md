@@ -38,7 +38,7 @@ answer the question here; you set up the run.
 
 ## GATE (mandatory stop) → 01_source
 
-the operator approves: the question framing · the scope · the declared sources.
+The operator approves: the question framing · the scope · the declared sources.
 **Do not proceed to fetch without sign-off.** Scope is direction-setting; narrowing it yourself
 is hidden direction-setting.
 

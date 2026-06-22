@@ -1,22 +1,28 @@
 # CONTEXT.md — 01_build (Layer-2 stage contract)
 *A stage dispatcher in the pipeline-ICM body. Small (~a few hundred tokens). Scoped per stage at run time.*
-*(Placeholder stage — shows the shape. Replace with your build's real stages.)*
+*(Example stage — the link-checker build.)*
 
 ---
 
 ## What this is
-A single build stage. In a real Build/Workflow project, **your actual code/repo lives at this level** —
-e.g. a `repo_vault/<your-repo>/` beside this contract, or the build scripts for this stage. The template
-ships only the contract shape, not toy code to maintain.
+The stage that writes the code. **In a real Build/Workflow project, your actual repo lives at this level** —
+e.g. `repo_vault/linkcheck/` beside this contract. The template ships the contract *shape*, not toy code to
+maintain.
 
 ## Inputs
-*(What this stage consumes — the recipe from `../../references/recipe.md`, prior stage `output/`, source files.)*
+- `../00_plan/output/plan.md` — the approved scope.
+- `../../references/recipe.md` — the conventions + hard constraints the code must obey.
 
 ## Process
-*(What this stage does — the build step. Deterministic joints are scripts; judgment steps are human-gated.)*
+1. Implement the recipe: link extraction (parse `[text](path)`), resolution (relative to each file's own
+   directory), and the CLI entrypoint.
+2. Keep the core **pure** (text + base path in, results out) so `02_test` can exercise it without the
+   filesystem.
+3. Human reviews **craft** — not whether to build, but whether the code is sound.
 
 ## Outputs
-*(What it produces → `output/`. Every output is an edit surface.)*
+- The artifact — the `linkcheck` source in `repo_vault/` (real project). Every file is an edit surface.
 
 ## What NOT to do
-*(Out-of-scope actions; anything that needs a hard gate, e.g. publishing/deploying.)*
+- Don't add scope the plan didn't approve (no URL / wikilink checking in v1).
+- Don't let the core read the filesystem directly — keep it pure, or `02_test` can't reach it.

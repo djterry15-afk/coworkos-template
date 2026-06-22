@@ -26,7 +26,7 @@ A self-contained ICM pipeline that takes **one post idea (a seed)** and produces
 | Job | Lives | Changes per run? |
 |---|---|---|
 | HOW to render (voice, craft) | factory `_config/` + `03_adapt/references/` | no |
-| WHAT to explore (the seed / topic) | **tier-3** (stated, or the Skeleton / `content-briefs/`), pulled in | yes (per seed) |
+| WHAT to explore (the seed / topic) | **tier-3** (stated, or a tier-3 idea-backlog if you keep one), pulled in | yes (per seed) |
 | The ANGLE | discovered in-pipeline, set at the `01` gate (`direction.md`) | yes (per run) |
 | Run-state | naming + folder position (no `RUNS.md`) | n/a |
 | Finished runs | `_archive/<slug>/` | — |

@@ -1,5 +1,5 @@
 # HOW TO RUN ONE DASHBOARD
-*Operator onboarding. Provisional — refine after the first real run.*
+*Operator onboarding.*
 
 ---
 
@@ -8,8 +8,10 @@ The scripts do the work; **you gate lightly.** One run = one date → one dashbo
 
 **One-time setup**
 - `pip install -r requirements.txt` (fredapi + pandas).
-- Set your FRED key in the environment: `export FRED_API_KEY=...` (bash) / `$env:FRED_API_KEY="..."`
-  (PowerShell). Never commit the key. See `_config/fetch-rules.md`.
+- Provide your FRED key one of two ways (`fetch.py` accepts either): copy `.env.example` to `.env`
+  and fill it in (gitignored — the README quickstart uses this), **or** set it in the environment
+  (`export FRED_API_KEY=...` in bash / `$env:FRED_API_KEY="..."` in PowerShell). Never commit the key.
+  See `_config/fetch-rules.md`.
 
 **A run**
 1. **00_plan — confirm the manifest.** Open `_config/manifest.md`. If the metrics are unchanged,

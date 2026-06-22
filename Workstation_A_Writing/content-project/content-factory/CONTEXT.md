@@ -20,4 +20,4 @@ This is a **production run**, not reasoning navigation. Entry = this router. Loa
 
 **This router is standing config — it never changes per run.** Run-state is read from the files: a `00_plan/output/manifest-<slug>.md` exists → that run started; the furthest stage `output/` holding `<slug>` → its current gate. No central ledger.
 
-To start a run: a **seed** (one idea) is given at entry — stated directly, or picked from a tier-3 backlog (`LinkedIn Content Skeleton.md` / `content-briefs/`); `00_plan` captures it and writes the manifest. On completion, a run's working files move to **`_archive/<slug>/`** so the active stage folders hold only in-flight work.
+To start a run: a **seed** (one idea) is given at entry — stated directly, or picked from a tier-3 idea-backlog (if you keep one); `00_plan` captures it and writes the manifest. On completion, a run's working files move to **`_archive/<slug>/`** so the active stage folders hold only in-flight work.

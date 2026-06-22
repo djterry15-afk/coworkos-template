@@ -7,15 +7,25 @@
 
 ## CURRENT STATE
 
-*(Placeholder — your real build-state lives here.)* What's built, what's in progress, what's blocked. The
-architecture decisions and their rationale. This is the shell you reason in; the code lives in `stages/`.
+*(Example build-state — replace with your own.)* Building `linkcheck` (spec in `references/recipe.md`). The
+pipeline below carries it from plan to release.
+- **Done:** recipe settled; `00_plan` gate passed.
+- **In progress:** `01_build` — implementing the link resolver.
+- **Blocked:** none.
 
 ## ARCHITECTURE DECISIONS
 
-*(Placeholder.)* The load-bearing choices and why — kept here so the build doesn't drift from its design.
+*(Example.)* The load-bearing choices and why — kept here so the build doesn't drift from its design.
+- **Standard library only.** A link-checker isn't worth a dependency tree; stdlib keeps it portable and fast
+  to audit. Revisit only if `[[wikilinks]]` support later forces a real markdown parser.
+- **Pure core, thin CLI.** Link extraction/resolution are pure functions (text + base path → results); the
+  CLI is a shell around them. This is what makes `02_test` possible without touching the filesystem.
+- **Report, never fix.** Auto-fixing a link writes to human-authored content — out of scope under the
+  bounded-autonomy rule. The tool surfaces problems; the human edits.
 
 ## THE BODY
 
-`stages/` (or a `repo_vault/<your-repo>/`) holds the actual code. The reasoning happens here at the project
-tier; the code is built there. At build time the relevant context from this shell is distilled into the
-stage contracts once, and a build run scopes context per stage.
+`stages/` holds the build pipeline (`00_plan → 01_build → 02_test → 03_release`). In a real project the
+actual code lives at the build stage — e.g. `stages/01_build/repo_vault/linkcheck/`. The reasoning happens
+here at the project tier; the code is built there. At build time this shell's context is distilled into the
+stage contracts once, and a run scopes context per stage.

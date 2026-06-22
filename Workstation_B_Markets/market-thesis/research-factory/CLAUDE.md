@@ -22,7 +22,7 @@ laid out, graded, provenance-stamped. It does **not** decide the thesis.
 The three roles stay separate (the acquire-vs-organize cut):
 - **This pipeline *acquires*** — finds and grades new external evidence → a brief.
 - **The `../llm-wiki/` *organizes*** — stores and links sourced data (consulted here, never written by here).
-- **the operator *concludes*** — reasons over the brief → the verdict lands in the parent market-thesis project `CONTEXT.md`.
+- **The operator *concludes*** — reasons over the brief → the verdict lands in the parent market-thesis project `CONTEXT.md`.
 
 ---
 
@@ -45,7 +45,7 @@ approves the candidate source set + reliability grades **before** any snapshot i
 research-factory/
 ├── CLAUDE.md            ← this map (L0)
 ├── CONTEXT.md           ← run router (L1) — pure standing config
-├── HOW-TO-RUN.md        ← operator onboarding (provisional — refine after first run)
+├── HOW-TO-RUN.md        ← operator onboarding
 ├── _config/             ← L3 craft, stable across runs
 │   ├── reliability-bar.md
 │   ├── provenance-rules.md
@@ -77,7 +77,7 @@ and `_config/` are pure standing config and never change per run.
 At run time load **only**: ROOT `CLAUDE.md` (auto) + ROOT `CONTEXT.md` (operator contract)
 + these factory files + the active stage + this run's own artifacts.
 
-- **DO** read `../llm-wiki/` via its `index.md` — scoped, Layer-3-style. That is the organized
+- **DO** read `../llm-wiki/` via its `wiki/index.md` — scoped, Layer-3-style. That is the organized
   *source store* (the precheck at 01), not synthesis.
 - **DON'T** read `../CONTEXT.md` (the parent project's synthesis). Producing the brief must
   not depend on the conclusion it feeds.

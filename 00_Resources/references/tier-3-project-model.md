@@ -59,6 +59,7 @@ project/
 ├── CONTEXT.md         live synthesis — the center (sized by relevance)
 ├── references/        [opt] EXTRACTED settled rules — often thin/empty pre-execution
 ├── llm-wiki/          [opt] only if it ingests external sources (index.md · log.md · pages)
+├── <workflow>/        [opt] one OR MORE tier-4 workflow subfolders, when earned (see tier-4 model)
 ├── _reasoning-log/    spent thinking, trace-to-source (index.md = control point)
 └── logs/              [opt] pure operational run-records
 ```
@@ -147,3 +148,8 @@ script** — the reasoning → production transition. The project tier stays a r
 the workflow body is pipeline-ICM (Layer 2 stage contracts + Layer 4 per-run artifacts). At build time the
 parents' relevant context is distilled **once** into the factory's L3 config; at run time the factory reads
 its own config and does **not** reload the parent synthesis. See `tier-4-workflow-model.md`.
+
+A project may nest **more than one** workflow when it runs several distinct production motions — each its
+own self-contained tier-4 subfolder, none loading the others. *(Optional, and earned per workflow.)* The
+template's `market-thesis` shows it: a research factory (acquire) **and** a deterministic monitor (monitor),
+plus a wiki (organize), all under one project.

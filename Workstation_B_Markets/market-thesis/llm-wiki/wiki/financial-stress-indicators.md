@@ -5,6 +5,16 @@ metric grouping.*
 
 ---
 
+**Summary**: When system-wide funding stress builds, funding-plumbing metrics move *before* credit spreads —
+the lead/lag ordering behind the sibling stress-monitor's metric grouping.
+
+**Sources**: the accepted research brief from research-factory run `sample-stress-metrics-lead-lag` (graded
+sources 1–2). *(Illustrative — placeholders, not real citations.)*
+
+**Last updated**: 2026-06-21.
+
+---
+
 ## The lead/lag structure
 
 When system-wide financial stress builds, the evidence (placeholder) points to a consistent ordering:
@@ -20,7 +30,7 @@ funding and credit stress moved nearly together. The ordering is a tendency, not
 
 ## Why it matters here
 
-This is the rationale the sibling `../stress-monitor/` encodes: its manifest groups metrics into
+This is the rationale the sibling `../../stress-monitor/` encodes: its manifest groups metrics into
 **"Funding plumbing (these move first)"** and **"Credit spreads (these confirm, and lag)."** The monitor
 doesn't re-derive this — it *monitors* what this page establishes. (The acquire → organize → monitor seam.)
 
